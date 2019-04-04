@@ -8,7 +8,9 @@ This is a collection of utility functions for working with async/await code.
 npm install @kev_nz/async-tools
 ```
 
-## Usage
+## API Usage
+
+Here are the functions provided. Additionally feel free to look at the tests in the project as well.
 
 ### Delay
 

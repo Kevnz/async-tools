@@ -58,7 +58,7 @@ describe('Reducing async functions', () => {
     const chain = await mapper(items, asyncMapper, 2)
     const end = Date.now()
     expect(chain[0]).toBe(100)
-    expect(end - start).toBeGreaterThan(50)
+    expect(end - start).toBeGreaterThanOrEqual(50)
   })
   it('should take a starting array with concurrency set to `4` and execute an async mapping function on array items four at a time', async () => {
     const start = Date.now()
@@ -76,6 +76,6 @@ describe('Reducing async functions', () => {
     const chain = await mapper(items, asyncMapper, 4)
     const end = Date.now()
     expect(chain[0]).toBe(100)
-    expect(end - start).toBeGreaterThan(30)
+    expect(end - start).toBeGreaterThanOrEqual(30)
   })
 })

@@ -70,5 +70,23 @@ describe('Composer to compose functions', () => {
       const result = await chain('dude')
       expect(result).toBe('DUDE-DUDE!!!-BOOM!!!-BOOM-BANG!!!')
     })
+    it('should take a function and parameters and execute the function with all parameters', async () => {
+      const anAsyncFunction = async val => {
+        await delay(10)
+        return val + 1
+      }
+      const anotherAsyncFunction = async (val, secondValue) => {
+        await delay(10)
+        return val + secondValue
+      }
+
+      const asyncChain = composer(
+        anAsyncFunction,
+        holder(anotherAsyncFunction, 3),
+        anAsyncFunction
+      )
+      const result = await asyncChain(0)
+      expect(result).toBe(5)
+    })
   })
 })

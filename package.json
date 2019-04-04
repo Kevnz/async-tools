@@ -1,6 +1,6 @@
 {
   "name": "@kev_nz/async-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Async tools",
   "main": "src/index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/Kevnz/async-tools/issues"
   },
-  "homepage": "https://kevinisom.info/async-toole",
+  "homepage": "https://kevinisom.info/async-tools",
   "devDependencies": {
     "@kev_nz/eslint-config": "^3.2.1",
     "@kev_nz/publisher": "^3.0.1",

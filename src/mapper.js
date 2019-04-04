@@ -1,7 +1,3 @@
-const defaults = {
-  concurrency: Infinity,
-}
-
 const mapper = (iterable, mappingFunction, concurrency = Infinity) =>
   new Promise((resolve, reject) => {
     const results = []

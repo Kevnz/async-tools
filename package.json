@@ -13,16 +13,24 @@
   "keywords": [
     "async",
     "await",
-    "utils"
+    "utils",
+    "functional",
+    "composition",
+    "functional composition",
+    "asynchronous",
+    "async tools",
+    "promises",
+    "helpers"
   ],
   "author": "Kevin Isom <kevin.isom@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Kevnz/async-tools/issues"
   },
-  "homepage": "https://github.com/Kevnz/async-tools#readme",
+  "homepage": "https://kevinisom.info/async-toole",
   "devDependencies": {
     "@kev_nz/eslint-config": "^3.2.1",
+    "@kev_nz/publisher": "^3.0.1",
     "eslint": "^5.16.0",
     "jest": "^24.6.0"
   }

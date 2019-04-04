@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>@kev_nz/async-tools</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta name="description" content="Async tools" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+  <div class="container">
+  <h1 id="async-tools">Async Tools</h1>
+<p>This is a collection of utility functions for working with async/await code.</p>
+<h2 id="install">Install</h2>
+<pre><code class="hljs"><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> @<span class="hljs-keyword">kev_nz</span>/<span class="hljs-keyword">async</span>-<span class="hljs-keyword">tools</span></code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="delay">Delay</h3>
+<p>The delay method allows you to use wait a number of milliseconds before continuing the exection of your code.</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { delay } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">await</span> delay(<span class="hljs-number">100</span>)
+  <span class="hljs-built_in">console</span>.info(<span class="hljs-string">'~100 milliseconds later'</span>)
+})()</code></pre>
+<h3 id="mapper">Mapper</h3>
+<p>Execute an asynchronous mapping function over an array of returning the result.</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { mapper } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+
+  <span class="hljs-keyword">const</span> items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+  <span class="hljs-keyword">const</span> mappedItems = <span class="hljs-keyword">await</span> mapper(items, anAsynchronousFunction)
+  <span class="hljs-comment">// passing in an additional concurrency value specifies the number of async methods executed at a time</span>
+  <span class="hljs-keyword">const</span> mappedItemsAgain = <span class="hljs-keyword">await</span> mapper(items, anAsynchronousFunction, <span class="hljs-number">2</span>)
+})()</code></pre>
+<h3 id="reducer">Reducer</h3>
+<p>Execute asynchronous reducer functions over a starting value.</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { delay, reducer } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+<span class="hljs-keyword">const</span> anAsyncFunction = <span class="hljs-keyword">async</span> val =&gt; {
+  <span class="hljs-keyword">await</span> delay(<span class="hljs-number">10</span>)
+  <span class="hljs-keyword">return</span> val + <span class="hljs-number">1</span>
+}
+(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> finalValue = <span class="hljs-keyword">await</span> reducer(<span class="hljs-number">0</span>,
+    anAsyncFunction,
+    anAsyncFunction,
+    anAsyncFunction
+  )
+  <span class="hljs-comment">//finalValue 3</span>
+})()</code></pre>
+<h3 id="each">Each</h3>
+<p>Execute an asynchronous function over an array one item at a time.</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { each } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+  <span class="hljs-keyword">const</span> [first, second, third] = <span class="hljs-keyword">await</span> each(items, anAsyncFunction)
+})()</code></pre>
+<h3 id="composer">Composer</h3>
+<p>Take number of functions and compose them together.</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { composer } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+<span class="hljs-keyword">const</span> anAsyncFunction = <span class="hljs-keyword">async</span> val =&gt; {
+  <span class="hljs-keyword">await</span> delay(<span class="hljs-number">10</span>)
+  <span class="hljs-keyword">return</span> val + <span class="hljs-number">1</span>
+}
+<span class="hljs-keyword">const</span> anotherAsyncFunction = <span class="hljs-keyword">async</span> val =&gt; {
+  <span class="hljs-keyword">await</span> delay(<span class="hljs-number">10</span>)
+  <span class="hljs-keyword">return</span> val + <span class="hljs-number">2</span>
+}
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> asyncChain = composer(
+    anAsyncFunction,
+    anotherAsyncFunction,
+    anAsyncFunction
+  )
+  <span class="hljs-keyword">const</span> finalValue = <span class="hljs-keyword">await</span> asyncChain(<span class="hljs-number">0</span>)
+  <span class="hljs-comment">//finalValue 4</span>
+})()</code></pre>
+<h3 id="holder">Holder</h3>
+<p>When used with composer it lets you pass additional parameters to a function in the composed.</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { composer, holder } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+<span class="hljs-keyword">const</span> anAsyncFunction = <span class="hljs-keyword">async</span> val =&gt; {
+  <span class="hljs-keyword">await</span> delay(<span class="hljs-number">10</span>)
+  <span class="hljs-keyword">return</span> val + <span class="hljs-number">1</span>
+}
+<span class="hljs-keyword">const</span> anotherAsyncFunction = <span class="hljs-keyword">async</span> (val, secondValue) =&gt; {
+  <span class="hljs-keyword">await</span> delay(<span class="hljs-number">10</span>)
+  <span class="hljs-keyword">return</span> val + secondValue
+}
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> asyncChain = composer(
+    anAsyncFunction,
+    holder(anotherAsyncFunction, <span class="hljs-number">3</span>),
+    anAsyncFunction
+  )
+  <span class="hljs-keyword">const</span> finalValue = <span class="hljs-keyword">await</span> asyncChain(<span class="hljs-number">0</span>)
+  <span class="hljs-comment">//finalValue 5</span>
+})()</code></pre>
+  </div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64038939-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64038939-2');
+</script>
+
+</body>

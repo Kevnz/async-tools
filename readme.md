@@ -135,4 +135,4 @@ const anotherAsyncFunction = async (val, secondValue) => {
 ### Test Coverage
 
 * [Coveralls](https://coveralls.io/github/Kevnz/async-tools?branch=master)
-* [Coverage Results](https://kevinisom.info/async-tools/coverage)
+* [Coverage Results](http://kevinisom.info/async-tools/coverage/lcov-report/)

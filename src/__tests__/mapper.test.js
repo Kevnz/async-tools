@@ -19,7 +19,7 @@ describe('Reducing async functions', () => {
     const items = [1, 2, 3]
     const chain = await mapper(items, asyncMapper)
     const end = Date.now()
-    expect(end - start).toBeLessThan(20)
+    expect(end - start).toBeLessThan(50)
     expect(chain[0]).toBe(100)
     expect(chain[1]).toBe(200)
     expect(chain[2]).toBe(300)

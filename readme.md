@@ -1,7 +1,6 @@
 # Async Tools
 
-[![npm version](https://badge.fury.io/js/%40kev_nz%2Fasync-tools.png)](https://badge.fury.io/js/%40kev_nz%2Fasync-tools)
-  ![Build Status](https://img.shields.io/circleci/project/github/Kevnz/async-tools/master.svg) [![Coverage Status](https://coveralls.io/repos/github/Kevnz/async-tools/badge.svg?branch=master)](https://coveralls.io/github/Kevnz/async-tools?branch=master)
+[![npm version](https://badge.fury.io/js/%40kev_nz%2Fasync-tools.svg)](https://badge.fury.io/js/%40kev_nz%2Fasync-tools) ![Build Status](https://img.shields.io/circleci/project/github/Kevnz/async-tools/master.svg) [![Coverage Status](https://coveralls.io/repos/github/Kevnz/async-tools/badge.svg?branch=master)](https://coveralls.io/github/Kevnz/async-tools?branch=master)
 
 This is a collection of utility functions for working with async/await code.
 

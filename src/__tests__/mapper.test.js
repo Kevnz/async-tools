@@ -65,7 +65,9 @@ describe('Reducing async functions', () => {
     let executing = 0
     const asyncMapper = async item => {
       if (executing > 3) {
-        throw new Error(`Currently ${executing} functions running`)
+        return Promise.reject(
+          new Error(`Currently ${executing} functions running`)
+        )
       }
       executing++
       await delay(10)
@@ -77,5 +79,23 @@ describe('Reducing async functions', () => {
     const end = Date.now()
     expect(chain[0]).toBe(100)
     expect(end - start).toBeGreaterThanOrEqual(30)
+  })
+
+  it('should throw an error', async () => {
+    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const limiter = async (item, index) => {
+      if (index > 3) {
+        return Promise.reject(new Error(`Over 3`))
+      }
+      await delay(10)
+      return item * 100
+    }
+    expect(mapper(items, limiter, 1)).rejects.toThrow('Over 3')
+    try {
+      await mapper(items, limiter, 1)
+      expect(true).toBe(false)
+    } catch (err) {
+      expect(err.message).toBe('Over 3')
+    }
   })
 })

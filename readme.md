@@ -131,3 +131,8 @@ const anotherAsyncFunction = async (val, secondValue) => {
   //finalValue 5
 })()
 ```
+
+### Test Coverage
+
+* [Coveralls](https://coveralls.io/github/Kevnz/async-tools?branch=master)
+* [Coverage Results](https://kevinisom.info/async-tools/coverage)

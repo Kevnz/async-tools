@@ -1,7 +1,7 @@
 {
   "name": "@kev_nz/async-tools",
   "version": "1.0.1",
-  "description": "Async tools",
+  "description": "Async tools - a collection of utility functions for working with async/await code.",
   "main": "src/index.js",
   "files": [
     "/src"
@@ -9,7 +9,9 @@
   "scripts": {
     "test": "jest",
     "cover": "jest --coverage",
-    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "predocs": " jest --coverage --coverageDirectory=./dist/coverage ",
+    "docs": "publisher"
   },
   "repository": {
     "type": "git",

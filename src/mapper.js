@@ -28,18 +28,20 @@ const mapper = (iterable, mappingFunction, concurrency = Infinity) =>
       resolvingCount++
 
       return Promise.resolve(nextItem.value)
-        .then(element => mappingFunction(element, i))
-        .then(
-          value => {
-            results[i] = value
-            resolvingCount--
-            return next()
-          },
-          error => {
+
+        .then(async element => {
+          try {
+            return await mappingFunction(element, i)
+          } catch (err) {
             isRejected = true
-            return reject(error)
+            return reject(err)
           }
-        )
+        })
+        .then(value => {
+          results[i] = value
+          resolvingCount--
+          return next()
+        })
     }
 
     for (let i = 0; i < concurrency; i++) {

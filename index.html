@@ -120,6 +120,14 @@
   <span class="hljs-keyword">const</span> finalValue = <span class="hljs-keyword">await</span> asyncChain(<span class="hljs-number">0</span>)
   <span class="hljs-comment">//finalValue 5</span>
 })()</code></pre>
+<h3 id="timeout">Timeout</h3>
+<p>Take number of functions and compose them together.</p>
+<p>```javascript<br />
+const { timeout } = require('@kev_nz/async-tools')</p>
+<p>(async () =&gt; {<br />
+  const result = await timeout(() =&gt; thingThatIsLongRunning())</p>
+<p>})()<br />
+``</p>
 <h3 id="test-coverage">Test Coverage</h3>
 <ul>
 <li><a href="https://coveralls.io/github/Kevnz/async-tools?branch=master">Coveralls</a></li>

@@ -1,3 +1,19 @@
+/**
+ * Execute an async function over an iterable collection
+ *
+ * @async
+ * @function mapper
+ * @param  {*} iterable- An iterable collection
+ * @param  {function} mappingFunction - The async mapping function to execute
+ * @param  {number} [concurrency=Infinity] - The max number of concurrent calls
+ * @returns {*} - The mapped results
+ * @example
+ *
+ * const results = await mapper(
+ *   [1,2,3,4,5],
+ *   asyncFunction
+ * )
+ */
 const mapper = (iterable, mappingFunction, concurrency = Infinity) =>
   new Promise((resolve, reject) => {
     const results = []

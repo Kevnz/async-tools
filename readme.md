@@ -143,7 +143,7 @@ const { timeout } = require('@kev_nz/async-tools')
   const result = await timeout(() => thingThatIsLongRunning())
 
 })()
-``
+```
 ### Test Coverage
 
 * [Coveralls](https://coveralls.io/github/Kevnz/async-tools?branch=master)

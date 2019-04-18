@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1555578810219" clover="3.2.0">
-  <project timestamp="1555578810219" name="All files">
+<coverage generated="1555579017329" clover="3.2.0">
+  <project timestamp="1555579017329" name="All files">
     <metrics statements="61" coveredstatements="61" conditionals="13" coveredconditionals="13" methods="19" coveredmethods="19" elements="93" coveredelements="93" complexity="0" loc="61" ncloc="61" packages="1" files="7" classes="7"/>
     <file name="composer.js" path="/Users/t826308/Projects/kevnz/async-tools/src/composer.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

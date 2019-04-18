@@ -132,6 +132,18 @@ const anotherAsyncFunction = async (val, secondValue) => {
 })()
 ```
 
+### Timeout
+
+Take number of functions and compose them together.
+
+```javascript
+const { timeout } = require('@kev_nz/async-tools')
+
+(async () => {
+  const result = await timeout(() => thingThatIsLongRunning())
+
+})()
+``
 ### Test Coverage
 
 * [Coveralls](https://coveralls.io/github/Kevnz/async-tools?branch=master)

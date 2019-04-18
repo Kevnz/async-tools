@@ -11,7 +11,8 @@
     "cover": "jest --coverage",
     "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "predocs": " jest --coverage --coverageDirectory=./dist/coverage ",
-    "docs": "publisher"
+    "docs": "publisher",
+    "jsdox": "jsdoc ./src/*.js --configure .jsdoc.json --verbose"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,9 @@
     "@kev_nz/publisher": "^3.0.1",
     "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
-    "jest": "^24.6.0"
+    "jest": "^24.6.0",
+    "jsdoc": "^3.5.5",
+    "jsdoc-to-markdown": "^4.0.1",
+    "minami": "^1.2.3"
   }
 }

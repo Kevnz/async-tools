@@ -144,6 +144,37 @@ const { timeout } = require('@kev_nz/async-tools')
 
 })()
 ```
+
+### Do While
+
+Execute an async function while a condition is true
+
+```javascript
+const { doWhile } = require('@kev_nz/async-tools')
+
+(async () => {
+  const results = await doWhile(async () => {
+    await asyncFunction()
+  }, () => something === true)
+})()
+```
+
+### While Do
+
+While a condition is true execute an async function
+
+```javascript
+const { whileDo } = require('@kev_nz/async-tools')
+
+(async () => {
+  const results = await whileDo(
+    () => something === true),
+    async () => {
+      await asyncFunction()
+    })
+})()
+```
+
 ### Test Coverage
 
 * [Coveralls](https://coveralls.io/github/Kevnz/async-tools?branch=master)

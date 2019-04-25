@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1555579017329" clover="3.2.0">
-  <project timestamp="1555579017329" name="All files">
-    <metrics statements="61" coveredstatements="61" conditionals="13" coveredconditionals="13" methods="19" coveredmethods="19" elements="93" coveredelements="93" complexity="0" loc="61" ncloc="61" packages="1" files="7" classes="7"/>
+<coverage generated="1556168988951" clover="3.2.0">
+  <project timestamp="1556168988951" name="All files">
+    <metrics statements="71" coveredstatements="71" conditionals="17" coveredconditionals="17" methods="21" coveredmethods="21" elements="109" coveredelements="109" complexity="0" loc="71" ncloc="71" packages="1" files="9" classes="9"/>
     <file name="composer.js" path="/Users/t826308/Projects/kevnz/async-tools/src/composer.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
@@ -10,8 +10,16 @@
     </file>
     <file name="delay.js" path="/Users/t826308/Projects/kevnz/async-tools/src/delay.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <line num="12" count="6" type="stmt"/>
-      <line num="13" count="70" type="stmt"/>
+      <line num="12" count="8" type="stmt"/>
+      <line num="13" count="469" type="stmt"/>
+    </file>
+    <file name="do-while.js" path="/Users/t826308/Projects/kevnz/async-tools/src/do-while.js">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="201" type="stmt"/>
+      <line num="18" count="201" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="198" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
     </file>
     <file name="each.js" path="/Users/t826308/Projects/kevnz/async-tools/src/each.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -82,6 +90,14 @@
       <line num="17" count="2" type="stmt"/>
       <line num="19" count="3" type="stmt"/>
       <line num="20" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+    </file>
+    <file name="while-do.js" path="/Users/t826308/Projects/kevnz/async-tools/src/while-do.js">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="201" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="198" type="stmt"/>
+      <line num="17" count="198" type="stmt"/>
       <line num="21" count="1" type="stmt"/>
     </file>
   </project>

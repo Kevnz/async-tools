@@ -128,6 +128,26 @@
   <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> timeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> thingThatIsLongRunning())
 
 })()</code></pre>
+<h3 id="do-while">Do While</h3>
+<p>Execute an async function while a condition is true</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { doWhile } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> results = <span class="hljs-keyword">await</span> doWhile(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> asyncFunction()
+  }, () =&gt; something === <span class="hljs-literal">true</span>)
+})()</code></pre>
+<h3 id="while-do">While Do</h3>
+<p>While a condition is true execute an async function</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { whileDo } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kev_nz/async-tools'</span>)
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> results = <span class="hljs-keyword">await</span> whileDo(
+    <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> something === <span class="hljs-literal">true</span>),
+    <span class="hljs-keyword">async</span> () =&gt; {
+      <span class="hljs-keyword">await</span> asyncFunction()
+    })
+})()</code></pre>
 <h3 id="test-coverage">Test Coverage</h3>
 <ul>
 <li><a href="https://coveralls.io/github/Kevnz/async-tools?branch=master">Coveralls</a></li>

@@ -4,6 +4,9 @@ const each = require('./each')
 const holder = require('./holder')
 const mapper = require('./mapper')
 const reducer = require('./reducer')
+const doWhile = require('./do-while')
+const whileDo = require('./while-do')
+const timeout = require('./timeout')
 
 module.exports = {
   composer,
@@ -12,4 +15,7 @@ module.exports = {
   holder,
   mapper,
   reducer,
+  doWhile,
+  whileDo,
+  timeout,
 }

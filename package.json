@@ -7,9 +7,9 @@
     "/src"
   ],
   "scripts": {
-    "test": "jest",
-    "cover": "jest --coverage",
-    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test": "jest ./src/__tests__/*.test.js",
+    "cover": "jest ./src/__tests__/*.test.js --coverage",
+    "coverage": "jest ./src/__tests__/*.test.js --coverage --coverageReporters=text-lcov | coveralls",
     "predocs": " jest --coverage --coverageDirectory=./dist/coverage ",
     "docs": "publisher",
     "jsdox": "jsdoc ./src/*.js --configure .jsdoc.json --verbose"

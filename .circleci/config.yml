@@ -23,10 +23,10 @@ jobs:
   "deployed":
     docker:
       - image: circleci/node:10
-      working_directory: ~/asynctools
-      steps:
-        - checkout
-        - run: cd examples && npm install && npm test
+    working_directory: ~/asynctools
+    steps:
+      - checkout
+      - run: cd examples && npm install && npm test
 
 workflows:
   version: 2

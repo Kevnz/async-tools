@@ -1,0 +1,15 @@
+{
+  "name": "examples-async-tools",
+  "version": "1.2.1",
+  "description": "Async tools - a collection of utility functions for working with async/await code.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@kev_nz/async-tools": "*",
+    "coveralls": "^3.0.3",
+    "jest": "^24.6.0"
+  },
+  "devDependencies": {}
+}

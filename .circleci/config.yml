@@ -1,15 +1,14 @@
 version: 2
 jobs:
-  "node-11":
+  "node-12":
     docker:
-      - image: circleci/node:11
+      - image: circleci/node:12
     working_directory: ~/asynctools
     steps:
       - checkout
 
       - run: npm install
       - run: npm test
-      - run: npm run coverage
 
   "node-10":
     docker:
@@ -39,9 +38,9 @@ workflows:
               only:
                 - master
     jobs:
-       - deployed
+       - "deployed"
   build:
     jobs:
-      - "node-11"
+      - "node-12"
       - "node-10"
       - "deployed"

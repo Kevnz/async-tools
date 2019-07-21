@@ -10,7 +10,7 @@ describe('Each async function', () => {
     const items = [1, 2, 3]
     const [first, second, third] = await each(items, asyncMapper)
     const end = Date.now()
-    expect(end - start).toBeGreaterThan(30)
+    expect(end - start).toBeGreaterThanOrEqual(30)
     expect(first).toBe(100)
     expect(second).toBe(200)
     expect(third).toBe(300)

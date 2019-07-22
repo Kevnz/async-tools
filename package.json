@@ -10,7 +10,7 @@
     "test": "jest ./src/__tests__/*.test.js",
     "cover": "jest ./src/__tests__/*.test.js --coverage",
     "coverage": "jest ./src/__tests__/*.test.js --coverage --coverageReporters=text-lcov | coveralls",
-    "predocs": " jest --coverage --coverageDirectory=./dist/coverage ",
+    "predocs": "jest ./src/__tests__/*.test.js --coverage --coverageDirectory=./dist/coverage",
     "docs": "publisher",
     "jsdox": "jsdoc ./src/*.js --configure .jsdoc.json --verbose",
     "preversion": "npm test",

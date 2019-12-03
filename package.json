@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "test": "jest ./src/__tests__/*.test.js",
+    "test:ci": "jest ./src/__tests__/*.test.js --reporters=jest-junit",
     "cover": "jest ./src/__tests__/*.test.js --coverage",
     "coverage": "jest ./src/__tests__/*.test.js --coverage --coverageReporters=text-lcov | coveralls",
     "predocs": "jest ./src/__tests__/*.test.js --coverage --coverageDirectory=./dist/coverage",
@@ -45,8 +46,19 @@
     "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
     "jest": "^24.6.0",
+    "jest-junit": "^10.0.0",
     "jsdoc": "^3.6.3",
     "jsdoc-to-markdown": "^5.0.0",
     "minami": "^1.2.3"
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "./reports",
+    "outputName": "junit.xml",
+    "uniqueOutputName": "false",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
   }
 }

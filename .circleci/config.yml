@@ -1,5 +1,17 @@
 version: 2
 jobs:
+  "node-13":
+    docker:
+      - image: circleci/node:13
+    working_directory: ~/asynctools
+    steps:
+      - checkout
+
+      - run: npm install
+      - run: npm test
+      - run: npm run test:ci
+      - store_test_results:
+          path: ~/asynctools/reports
   "node-12":
     docker:
       - image: circleci/node:12
@@ -9,6 +21,9 @@ jobs:
 
       - run: npm install
       - run: npm test
+      - run: npm run test:ci
+      - store_test_results:
+          path: ~/asynctools/reports
 
   "node-10":
     docker:
@@ -19,6 +34,9 @@ jobs:
 
       - run: npm install
       - run: npm test
+      - run: npm run test:ci
+      - store_test_results:
+          path: ~/asynctools/reports
   "deployed":
     docker:
       - image: circleci/node:10
@@ -38,9 +56,10 @@ workflows:
               only:
                 - "master"
     jobs:
-       - "deployed"
+      - "deployed"
   build:
     jobs:
+      - "node-13"
       - "node-12"
       - "node-10"
       - "deployed"

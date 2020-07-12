@@ -28,6 +28,9 @@ describe('Composer to compose functions', () => {
     await delay(5)
     return func3(val)
   }
+  const errorFunc = () => {
+    throw new Error('The Error')
+  }
   it('should take 3 functions as parameters and execute them on a value', async () => {
     const chain = await composer(asyncFunc1, asyncFunc2, asyncFunc3)
     const result = await chain('dude')
@@ -38,7 +41,15 @@ describe('Composer to compose functions', () => {
     const result = await chain('dude')
     expect(result).toBe('DUDE-DUDE!!!-DUDE-DUDE!!!')
   })
+  it('should throw when function errors', async () => {
+    try {
+      const chain = composer(func1, func2, errorFunc, func2)
 
+      await chain('dude')
+    } catch (err) {
+      expect(err.name).toBe('Error')
+    }
+  })
   const heldFunction1 = async (val, other) => {
     await delay(5)
     return func3(`${val}-${other}`)

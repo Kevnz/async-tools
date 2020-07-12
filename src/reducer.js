@@ -26,8 +26,12 @@ module.exports = (startValue, ...funcs) =>
         resolve(total)
         return
       }
-      const result = await el.value(total)
-      next(result)
+      try {
+        const result = await el.value(total)
+        next(result)
+      } catch (error) {
+        return reject(error)
+      }
     }
 
     next(startValue)

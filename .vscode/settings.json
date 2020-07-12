@@ -67,5 +67,8 @@
       "filename": true,
       "format": "svg"
     }
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

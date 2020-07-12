@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1563765893094" clover="3.2.0">
-  <project timestamp="1563765893094" name="All files">
-    <metrics statements="71" coveredstatements="71" conditionals="17" coveredconditionals="17" methods="21" coveredmethods="21" elements="109" coveredelements="109" complexity="0" loc="71" ncloc="71" packages="1" files="9" classes="9"/>
-    <file name="composer.js" path="/Users/t826308/Projects/kevnz/async-tools/src/composer.js">
+<coverage generated="1594597805898" clover="3.2.0">
+  <project timestamp="1594597805898" name="All files">
+    <metrics statements="73" coveredstatements="73" conditionals="17" coveredconditionals="17" methods="21" coveredmethods="21" elements="111" coveredelements="111" complexity="0" loc="73" ncloc="73" packages="1" files="9" classes="9"/>
+    <file name="composer.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/composer.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
-      <line num="18" count="7" type="stmt"/>
+      <line num="18" count="8" type="stmt"/>
     </file>
-    <file name="delay.js" path="/Users/t826308/Projects/kevnz/async-tools/src/delay.js">
+    <file name="delay.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/delay.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <line num="12" count="8" type="stmt"/>
       <line num="13" count="469" type="stmt"/>
     </file>
-    <file name="do-while.js" path="/Users/t826308/Projects/kevnz/async-tools/src/do-while.js">
+    <file name="do-while.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/do-while.js">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="201" type="stmt"/>
@@ -21,18 +21,18 @@
       <line num="19" count="198" type="stmt"/>
       <line num="23" count="1" type="stmt"/>
     </file>
-    <file name="each.js" path="/Users/t826308/Projects/kevnz/async-tools/src/each.js">
+    <file name="each.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/each.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="18" count="1" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
     </file>
-    <file name="holder.js" path="/Users/t826308/Projects/kevnz/async-tools/src/holder.js">
+    <file name="holder.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/holder.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="18" count="1" type="stmt"/>
       <line num="19" count="4" type="stmt"/>
     </file>
-    <file name="mapper.js" path="/Users/t826308/Projects/kevnz/async-tools/src/mapper.js">
+    <file name="mapper.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/mapper.js">
       <metrics statements="33" coveredstatements="33" conditionals="9" coveredconditionals="9" methods="5" coveredmethods="5"/>
       <line num="17" count="2" type="cond" truecount="1" falsecount="0"/>
       <line num="18" count="8" type="stmt"/>
@@ -68,21 +68,23 @@
       <line num="67" count="2" type="stmt"/>
       <line num="72" count="2" type="stmt"/>
     </file>
-    <file name="reducer.js" path="/Users/t826308/Projects/kevnz/async-tools/src/reducer.js">
-      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+    <file name="reducer.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/reducer.js">
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <line num="19" count="2" type="stmt"/>
-      <line num="20" count="9" type="stmt"/>
-      <line num="21" count="9" type="stmt"/>
-      <line num="22" count="9" type="stmt"/>
-      <line num="23" count="41" type="stmt"/>
-      <line num="25" count="41" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="10" type="stmt"/>
+      <line num="21" count="10" type="stmt"/>
+      <line num="22" count="10" type="stmt"/>
+      <line num="23" count="44" type="stmt"/>
+      <line num="25" count="44" type="cond" truecount="2" falsecount="0"/>
       <line num="26" count="9" type="stmt"/>
       <line num="27" count="9" type="stmt"/>
-      <line num="29" count="32" type="stmt"/>
-      <line num="30" count="32" type="stmt"/>
-      <line num="33" count="9" type="stmt"/>
+      <line num="29" count="35" type="stmt"/>
+      <line num="30" count="35" type="stmt"/>
+      <line num="31" count="34" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="37" count="10" type="stmt"/>
     </file>
-    <file name="timeout.js" path="/Users/t826308/Projects/kevnz/async-tools/src/timeout.js">
+    <file name="timeout.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/timeout.js">
       <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <line num="14" count="1" type="cond" truecount="2" falsecount="0"/>
       <line num="15" count="3" type="stmt"/>
@@ -92,7 +94,7 @@
       <line num="20" count="1" type="stmt"/>
       <line num="21" count="1" type="stmt"/>
     </file>
-    <file name="while-do.js" path="/Users/t826308/Projects/kevnz/async-tools/src/while-do.js">
+    <file name="while-do.js" path="/Users/kevinisom/Projects/kevnz/async-tools/src/while-do.js">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="201" type="cond" truecount="2" falsecount="0"/>
